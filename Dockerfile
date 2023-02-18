@@ -6,7 +6,7 @@ RUN yum -y install java
 CMD /bin/bash
 RUN yum install zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html
-WORKDIR /var/www/html
+RUN cd /var/www/html
 RUN unzip diffuso.zip
 RUN rm -rf diffuso.zip &&\
 cp -rf diffuso/* . &&\
